@@ -428,20 +428,14 @@ axios.get(`https://mnazria.herokuapp.com/api/porn?search=${teks}`).then((res) =>
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("%waifu")){
-const teks = text.replace(/%loli/, "")
-axios.get(`https://tobz-api.herokuapp.com/api/waifu`).then((res) => {
-    let hasil = `Name : ${name}\nImage : ${image}\nDesk : ${desc}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
 if (text.includes("%nekonime")){
 const teks = text.replace(/%nekonime/, "")
 axios.get(`https://tobz-api.herokuapp.com/api/nekonime`).then((res) => {
     let hasil = `${result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
-}if (text.includes("%randomhentai")){
+}
+if (text.includes("%randomhentai")){
 const teks = text.replace(/%randomhentai/, "")
 axios.get(`https://tobz-api.herokuapp.com/api/hentai`).then((res) => {
     let hasil = `${result}`;
@@ -449,7 +443,7 @@ axios.get(`https://tobz-api.herokuapp.com/api/hentai`).then((res) => {
 })
 }if (text.includes("%nsfwneko")){
 const teks = text.replace(/%nsfwneko/, "")
-axios.get(`https://tobz-api.herokuapp.com/api/nsfwnekoi`).then((res) => {
+axios.get(`https://tobz-api.herokuapp.com/api/nsfwneko`).then((res) => {
     let hasil = `${result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -478,7 +472,7 @@ axios.get(`https://tobz-api.herokuapp.com/api/kiss`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }if (text.includes("%animecrygif")){
-const teks = text.replace(/%loli/, "")
+const teks = text.replace(/%animecrygif/, "")
 axios.get(`https://tobz-api.herokuapp.com/api/cry`).then((res) => {
     let hasil = `${result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
@@ -525,16 +519,9 @@ axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text=${tek
     let hasil = `*NIH KAK SILAHKAN DIDOWNLOAD DAN NIKMATI HASILNYA :D*\n\n${result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
-}
-if (text.includes("#tts")){
-const teks = text.replace(/#tts /, "")
+if (text.includes("%tts")){
+const teks = text.replace(/%tts /, "")
 const gtts = (`https://rest.farzain.com/api/tts.php?id=${teks}&apikey=O8mUD3YrHIy9KM1fMRjamw8eg`)
-    conn.sendMessage(id, gtts ,MessageType.text);
-})
-}
-if (text.includes("#tts")){
-const teks = text.replace(/#tts /, "")
-const gtts = (`http://api.farzain.com/meme.php?apikey=O8mUD3YrHIy9KM1fMRjamw8eg&kata1=${teks1}&kata2=${teks2}&pict=${teks3}`)
     conn.sendMessage(id, gtts ,MessageType.text);
 })
 }
