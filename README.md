@@ -37,14 +37,14 @@
 5. pkg install wget
 6. apt update
 7. apt upgrade
-8. git clone https://github.com/alvarobherman/alvbot-wabot
-9. cd alvbot-wabot
+8. git clone https://github.com/alvarobherman/alvbot
+9. cd alvbot
 10. ls
 11. npm i -g cwebp
 12. npm i -g ytdl
 13. npm i
 14. npm i got
-15. node index.js
+15. node alvbot.js
 
 TINGGAL SCAN DEH XIXIXI 😁
 
