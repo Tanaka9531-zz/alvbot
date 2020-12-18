@@ -367,7 +367,7 @@ axios.get(`https://docs-jojo.herokuapp.com/api/jadwaltv?ch=${teks}`).then((res) 
 }
 if (text.includes("%renunganharian")){
 const teks = text.replace(/%renunganharian/, "")
-axios.get(`https://docs-jojo.herokuapp.com/api/jadwaltv?ch=${teks}`).then((res) => {
+axios.get(`https://docs-jojo.herokuapp.com/api/renungan`).then((res) => {
     let hasil = `*RENUNGAN HARIAN HARI INI :*\n\nJudul : ${judul}\nIsi : ${isi}\nPesan : ${pesan}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
